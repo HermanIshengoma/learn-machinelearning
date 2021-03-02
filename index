@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>LML </title>
+		<link href="style.css" rel="stylesheet" type="text/css">
+
+	</head>
+	<body>
+		<header>
+			<div class = "row">
+				<div class="logo">
+				<img src="">
+				</div>
+			<ul class="main-nav">
+				<li class = "active"><a href=""> HOME</a> </li>
+				<li><a href=""> NOTIFICATIONS</a> </li>
+				<li><a href=""> PROFILE</a> </li>
+			</ul>
+			</div>
+
+			<div class="hero">
+			<h1>Are You Ready?</h1>
+
+				<div class="button">
+					<a href="" class="btn btn-one"> egveree </a>
+					<a href="" class="btn btn-two"> dlskvnoesjn </a>
+
+			</div>
+
+		<\header>
+	</body>
+</html>
