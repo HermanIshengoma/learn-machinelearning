@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/')
 def start_page():
 	html = render_template('index.html')
-	return make_response(html)
+	return html
 
 
 if __name__ == "__main__":
