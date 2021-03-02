@@ -1,0 +1,131 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+header
+{
+	/*background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5))url(dragon.jpg);*/
+	background-image: url(dragon.jpg);
+	height: 100vh;
+	background-size: cover;
+	background-position: center: 
+}
+
+/*all of the nav stuff is to align it, make it blend into the background (first 3 below)*/
+.main-nav
+{
+	float: right;
+	list-style:none;
+	margin-top:30px;
+}
+
+
+.main-nav li
+{
+	display: inline-block;
+}
+
+.main-nav li a
+{
+	color: white;
+	text-decoration: none;
+	padding: 5px 20px;
+	font-family: "Roboto", sans-serif;
+	font-size: 15px;
+}
+
+/*Button around home link*/
+.main-nav li.active a
+{
+	border: 1px solid white;
+}
+
+/*make it such that there is an outline when you hover over a button*/
+.main-nav li a:hover
+{
+	border: 1px solid white;
+}
+
+/*changing size of logo*/
+.logo img
+{
+	width:150px;
+	height: auto;
+	float: left;
+}
+
+body
+{
+	font-family: monospace;
+}
+
+.row
+{
+	max-width: 1200px;
+	margin: auto;
+}
+
+.hero
+{
+	/*position: absolute;
+	width: 1200px;
+	margin: center;
+	margin: 0;*/
+   	position: absolute;               /* 2 */
+   	top: 50%;                         /* 3 */
+   	transform: translate(0, -50%);
+	margin-left: 300px;
+	text-align:center;
+	/*margin-top: 0px;*/
+}
+
+h1
+{
+	color: white;
+	text-transform: uppercase;
+	font-size: 70px;
+	text-align: center;
+	margin-top: 275px;
+}
+
+.button
+{
+	margin-top: 30px;
+	margin-left: 000px;
+}
+
+.btn
+{
+	border: 1px solid white;
+	padding: 10px 30px;
+	color: white;
+	text-decoration: none;
+	margin-right: 5px;
+	font-size: 13px;
+	text-transform: uppercase;
+}
+
+.btn-one
+{
+	background-color: darkgreen;
+	font-family: "Roboto", sans-serif;
+}
+
+.btn-two
+{
+	/*background-color: darkgreen;*/
+	font-family: "Roboto", sans-serif;
+}
+
+.btn-two:hover
+{
+	/*background-color: darkgreen;*/
+	background-color: darkgreen;
+	transition: all 0.5s ease-in;
+}
+
+
+
+
