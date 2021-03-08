@@ -4,7 +4,7 @@ from flask import render_template, jsonify, session
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def start_page():
 	html = render_template('index.html')
 	return html
