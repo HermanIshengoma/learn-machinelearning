@@ -15,5 +15,15 @@ def main_page():
 	html = render_template('main.html')
 	return html
 
+@app.route('/numpy', methods=['GET'])
+def numpy_page():
+	html = render_template('numpy.html')
+	return html
+
+@app.route('/programming', methods=['GET'])
+def programming_page():
+	html = render_template('programming.html')
+	return html
+
 if __name__ == "__main__":
 	app.run()
