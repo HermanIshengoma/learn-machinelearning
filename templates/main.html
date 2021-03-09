@@ -29,6 +29,20 @@
           font-size: 3.5rem;
         }
       }
+
+      div.vertical-line{
+      width: 1px; /* Line width */
+      background-color: black; /* Line color */
+      height: 25%; /* Override in-line if you want specific height. */
+      display:inline-block;
+      /*float: left; /* Causes the line to float to left of content. 
+        You can instead use position:absolute or display:inline-block
+        if this fits better with your design */}
+      
+      your_col{
+        border-left: 3px solid black;
+      }
+
     </style>
 
     
@@ -107,8 +121,61 @@
 
     <h1 class="h2">What Are Matrices</h1> 
     </div> 
-    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    
+      <p>Traditionally, algebra was the art of solving equations and systems of equations.
+The word algebra comes from the Arabic al-jabr, which means restoration (of broken parts).
+The term was first used in a mathematical sense by Mohammed al-Khowarizmi (c. 780–850), who worked at the House of Wisdom, an academy established by Caliph al-Ma’mun in Baghdad. Linear algebra, then, is the art of solving systems of linear equations.
 
+The need to solve systems of linear equations frequently arises in mathematics, statistics, physics, astronomy, engineering, computer science, and economics.
+Solving systems of linear equations is not conceptually difficult. For small sys-
+tems, ad hoc methods certainly suffice. Larger systems, however, require more sys-
+tematic methods. The approach generally used today was beautifully 2,000 years ago in a Chinese text, the Nine Chapters on the Mathematical Art 2 (Jiuzhang Suanshu, ). Chapter 8 of that text, called Method of Rectangular Arrays, contains the following problem:
+ </p>
+
+ <p style="text-align:center; ">
+  <i>The yield of one bundle of inferior rice, two bundles of medium-grade rice, 3
+and three bundles of superior rice is 39 dou of grain. The yield of one bundle of inferior rice, three bundles of medium-grade rice, and two bundles of superior rice is 34 dou. The yield of three bundles of inferior rice, two bundles of medium-grade rice, and one bundle of superior rice is 26 dou. What is the yield of one bundle of each grade of rice?</i>
+ </p>
+
+ <p>
+  In this problem the unknown quantities are the yields of one bundle of inferior, one bundle of medium-grade, and one bundle of superior rice. Let us denote these quantities by x, y, and z, respectively. The problem can then be represented by the following system of linear equations:
+ </p>
+
+
+   <table cellspacing="0" cellpadding="0" style="margin-left: auto; margin-right: auto;">
+
+    <tr>
+
+      <td class="first" id="your_col">x + 2y + 3z = 39</td>
+    </tr>
+    <tr>
+      <td class="second"id="your_col">x + 3y + 2z = 34</td>
+    </tr>
+    <tr>
+      <td class="third"id="your_col">3x + 2y + z = 26</td>
+    </tr>
+  </table>
+
+<p>When mathematicians in ancient China had to solve a system of simultaneous linear
+equations, they took all the numbers involved in this system and arranged them in a rectangular pattern (Fang Cheng in Chinese). All the information about this system is conveniently stored in an array of numbers.</p>
+
+
+<p> All the information about this system is conveniently stored in this array of numbers is called a matrix.</p>
+
+<strong> INSERT MATRIX</strong>
+
+<p> Since this matrix has three rows and four columns, it is callled a 3x4 matrix ("three by four").</p>
+
+It is customary to label the entries of a 3 × 4 matrix A with double subscripts
+as follows: <strong> INSERT MATRIX</strong>
+
+<p>The entry <i>a<sub>ij</sub></i> is located in the <i>ith</i> row and the <i>jth</i> column.</p>
+
+<p> A matrix with only one column is called a column vector, or simply a vector. The entries of a vector are called its components. The set of all column vectors with n components is denoted by Rn ; we will refer to Rn as a vector space. </p>
+
+
+
+ <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
     <h1 class="h2">Solving Matrices</h2></div>
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
     <h1 class="h2">Matrix Operations</h1></div>
