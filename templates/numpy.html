@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.80.0">
-    <title>Dashboard Template · Bootstrap v5.0</title>
+    <title>LML: Numpy</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
 
@@ -48,6 +48,10 @@
       <a class="nav-link" href="#">Sign out</a>
     </li>
   </ul>
+
+
+
+
 </header>
 
 <!--nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -103,14 +107,43 @@
       </div>
     </nav>
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <div style=" margin-left: 30px;">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
 
     <h1 class="h2">Numpy Intro</h1> 
-    </div> 
-    
+     </div>
 
 
-  
+    <!-- For Thebe -->
+  <script type="text/x-thebe-config">
+{
+    requestKernel: true,
+    binderOptions: {
+        repo: "binder-examples/requirements",
+    },
+    kernelOptions: {
+  kernelName: "python3",
+},
+}
+</script>
+
+<script src="https://unpkg.com/thebe@latest/lib/index.js" ></script>
+
+<button id="activateButton"  style="width: 150px; height: 75px; font-size: 1.5em;">Activate</button>
+<script>
+var bootstrapThebe = function() {
+    thebelab.bootstrap();
+}
+
+document.querySelector("#activateButton").addEventListener('click', bootstrapThebe)
+</script>
+
+    <pre data-executable="true" data-language="python">print("Hello World!")</pre>
+
+    <pre data-executable="true" data-language="python">print("Hello World!")</pre>
+
+
+  </div>
   </main>
 
 
