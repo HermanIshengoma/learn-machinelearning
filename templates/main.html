@@ -9,7 +9,7 @@
     <title>Dashboard Template · Bootstrap v5.0</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
-
+    <script type=”text/javascript” src=”http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML”></script>
     
 
     <!-- Bootstrap core CSS -->
@@ -127,9 +127,7 @@ The word algebra comes from the Arabic al-jabr, which means restoration (of brok
 The term was first used in a mathematical sense by Mohammed al-Khowarizmi (c. 780–850), who worked at the House of Wisdom, an academy established by Caliph al-Ma’mun in Baghdad. Linear algebra, then, is the art of solving systems of linear equations.
 
 The need to solve systems of linear equations frequently arises in mathematics, statistics, physics, astronomy, engineering, computer science, and economics.
-Solving systems of linear equations is not conceptually difficult. For small sys-
-tems, ad hoc methods certainly suffice. Larger systems, however, require more sys-
-tematic methods. The approach generally used today was beautifully 2,000 years ago in a Chinese text, the Nine Chapters on the Mathematical Art 2 (Jiuzhang Suanshu, ). Chapter 8 of that text, called Method of Rectangular Arrays, contains the following problem:
+Solving systems of linear equations is not conceptually difficult. For small systems, ad hoc methods certainly suffice. Larger systems, however, require more systematic methods. The approach generally used today was beautifully 2,000 years ago in a Chinese text, the Nine Chapters on the Mathematical Art 2 (Jiuzhang Suanshu, ). Chapter 8 of that text, called Method of Rectangular Arrays, contains the following problem:
  </p>
 
  <p style="text-align:center; ">
@@ -162,22 +160,98 @@ equations, they took all the numbers involved in this system and arranged them i
 
 <p> All the information about this system is conveniently stored in this array of numbers is called a matrix.</p>
 
-<strong> INSERT MATRIX</strong>
+<div style="margin-left: auto; margin-right: auto; text-align: center;">
+<math xmlns = "http://www.w3.org/1998/Math/MathML" >
+		<mrow>
+  <mo> [ </mo>
+  <mtable>
+    <mtr>
+      <mtd> <mn>1</mn> </mtd>
+      <mtd> <mn>2</mn> </mtd>
+      <mtd> <mn>3</mn> </mtd>
+      <mtd> <mn>39</mn> </mtd>
+    </mtr>
+    <mtr>
+      <mtd> <mn>1</mn> </mtd>
+      <mtd> <mn>3</mn> </mtd>
+      <mtd> <mn>2</mn> </mtd>
+      <mtd> <mn>34</mn> </mtd>
+    </mtr>
+    <mtr>
+      <mtd> <mn>3</mn> </mtd>
+      <mtd> <mn>2</mn> </mtd>
+      <mtd> <mn>1</mn> </mtd>
+      <mtd> <mn>26</mn> </mtd>
+    </mtr>
+  </mtable>
+  <mo> ] </mo>
+</mrow>
+			
+      </math>
+  </div>
 
-<p> Since this matrix has three rows and four columns, it is callled a 3x4 matrix ("three by four").</p>
+<p> Since this matrix has three rows and four columns, it is callled a 3x4 matrix ("three by four"). We have a special term for the number of rows and columns a matrix has: <strong> the dimension </strong> of the matrix. In this case, the dimension of the matrix is 3x4. </p>
 
 It is customary to label the entries of a 3 × 4 matrix A with double subscripts
-as follows: <strong> INSERT MATRIX</strong>
+as follows: 
+
+<div style="margin-left: auto; margin-right: auto; text-align: center;">
+<math xmlns = "http://www.w3.org/1998/Math/MathML" >
+		<mrow>
+  <mo> [ </mo>
+  <mtable>
+    <mtr>
+      <mtd> <mn>a<sub>11</sub></mn> </mtd>
+      <mtd> <mn>a<sub>12</sub></mn> </mtd>
+      <mtd> <mn>a<sub>13</sub></mn> </mtd>
+      <mtd> <mn>a<sub>14</sub></mn> </mtd>
+    </mtr>
+    <mtr>
+      <mtd> <mn>a<sub>21</sub></mn> </mtd>
+      <mtd> <mn>a<sub>22</sub></mn> </mtd>
+      <mtd> <mn>a<sub>23</sub></mn> </mtd>
+      <mtd> <mn>a<sub>24</sub></mn> </mtd>
+    </mtr>
+    <mtr>
+      <mtd> <mn>a<sub>31</sub></mn> </mtd>
+      <mtd> <mn>a<sub>32</sub></mn> </mtd>
+      <mtd> <mn>a<sub>33</sub></mn> </mtd>
+      <mtd> <mn>a<sub>34</sub></mn> </mtd>
+    </mtr>
+  </mtable>
+  <mo> ] </mo>
+</mrow>
+			
+      </math>
+  </div>
 
 <p>The entry <i>a<sub>ij</sub></i> is located in the <i>ith</i> row and the <i>jth</i> column.</p>
 
 <p style="border:3px; border-style:solid; padding: 1em; margin-left: auto; margin-right: auto"> A matrix with only one column is called a column vector, or simply a <strong>vector </strong>. </p>
 
 Example of vector:
-<strong> INSERT VECTOR</strong>
-
-
-
+<div style="margin-left: auto; margin-right: auto; text-align: center;">
+<math xmlns = "http://www.w3.org/1998/Math/MathML" >
+		<mrow>
+  <mo> [ </mo>
+  <mtable>
+    <mtr>
+      <mtd> <mn>1</mn> </mtd>
+      
+    </mtr>
+    <mtr>
+      <mtd> <mn>2</mn> </mtd>
+      
+    </mtr>
+    <mtr>
+      <mtd> <mn>3</mn> </mtd>
+    </mtr>
+  </mtable>
+  <mo> ] </mo>
+</mrow>
+			
+      </math>
+  </div>
 
 
  <!--div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -185,6 +259,892 @@ Example of vector:
 
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
     <h1 class="h2">Matrix Operations</h1></div>
+    <p> There are multiple operations that we can perform on a matrix, below are some of the most basic and useful operations. </p>
+
+    <h3> Addition </h3>
+    <p> When adding matrices, one must always make sure that the dimensions of the matrices are the same. One cannot add a 2x1 matrix with a 3x1 matrix, but only ones with the same rows and the same columns.</p>
+    <p> To add a matrix one adds the i-th entry of a matrix to the i-th entry of another matrix for all entries. The resulting matrix is then a matrix with the same dimensions as the matrices that underwent addition. <strong> For example:</strong></p>
+
+
+
+    <div style="margin-left: auto; margin-right: auto; text-align: center;">
+<math xmlns = "http://www.w3.org/1998/Math/MathML" >
+		<mrow>
+  <mo> [ </mo>
+  <mtable>
+    <mtr>
+      <mtd> <mn>1</mn> </mtd>
+      <mtd> <mn>2</mn> </mtd>
+      <mtd> <mn>3</mn> </mtd>
+      
+    </mtr>
+    <mtr>
+      <mtd> <mn>4</mn> </mtd>
+      <mtd> <mn>5</mn> </mtd>
+      <mtd> <mn>6</mn> </mtd>
+      
+    </mtr>
+    <mtr>
+      <mtd> <mn>7</mn> </mtd>
+      <mtd> <mn>8</mn> </mtd>
+      <mtd> <mn>9</mn> </mtd>
+    </mtr>
+  </mtable>
+  <mo> ] </mo>
+</mrow>
+
+&emsp; &emsp; + &emsp; &emsp;		
+		<mrow>
+  <mo> [ </mo>
+  <mtable>
+    <mtr>
+      <mtd> <mn>10</mn> </mtd>
+      <mtd> <mn>11</mn> </mtd>
+      <mtd> <mn>12</mn> </mtd>
+      
+    </mtr>
+    <mtr>
+      <mtd> <mn>13</mn> </mtd>
+      <mtd> <mn>14</mn> </mtd>
+      <mtd> <mn>15</mn> </mtd>
+      
+    </mtr>
+    <mtr>
+      <mtd> <mn>16</mn> </mtd>
+      <mtd> <mn>17</mn> </mtd>
+      <mtd> <mn>18</mn> </mtd>
+      
+    </mtr>
+  </mtable>
+  <mo> ] </mo>
+</mrow>
+
+&emsp; &emsp; = &emsp; &emsp; 
+		<mrow>
+  <mo> [ </mo>
+  <mtable>
+    <mtr>
+      <mtd> <mn>11</mn> </mtd>
+      <mtd> <mn>13</mn> </mtd>
+      <mtd> <mn>15</mn> </mtd>
+    </mtr>
+    <mtr>
+      <mtd> <mn>17</mn> </mtd>
+      <mtd> <mn>19</mn> </mtd>
+      <mtd> <mn>21</mn> </mtd>
+      
+    </mtr>
+    <mtr>
+    	<mtd> <mn>23</mn> </mtd>
+      <mtd> <mn>25</mn> </mtd>
+      <mtd> <mn>27</mn> </mtd>
+
+    </mtr>
+  </mtable>
+  <mo> ] </mo>
+</mrow>
+			
+      </math>
+  </div>
+
+In the above example, the first entry of the first matrix (1) was added to the first entry of the second matrix (10) to make the first entry of the resulting matrix to equal 11. This was done for all entries. 
+
+<h3> Subtraction </h3>
+    <p> When subtracting matrices, one must always make sure that the dimensions of the matrices are the same. One cannot add a 2x1 matrix with a 3x1 matrix, but only ones with the same rows and the same columns.</p>
+    <p> To subtract a matrix one subtracts the i-th entry of a matrix to the i-th entry of another matrix for all entries. The resulting matrix is then a matrix with the same dimensions as the matrices that underwent subtraction. <strong> For example:</strong></p>
+
+
+
+    <div style="margin-left: auto; margin-right: auto; text-align: center;">
+<math xmlns = "http://www.w3.org/1998/Math/MathML" >
+		<mrow>
+  <mo> [ </mo>
+  <mtable>
+    <mtr>
+      <mtd> <mn>1</mn> </mtd>
+      <mtd> <mn>2</mn> </mtd>
+      <mtd> <mn>3</mn> </mtd>
+      
+    </mtr>
+    <mtr>
+      <mtd> <mn>4</mn> </mtd>
+      <mtd> <mn>5</mn> </mtd>
+      <mtd> <mn>6</mn> </mtd>
+      
+    </mtr>
+    <mtr>
+      <mtd> <mn>7</mn> </mtd>
+      <mtd> <mn>8</mn> </mtd>
+      <mtd> <mn>9</mn> </mtd>
+    </mtr>
+  </mtable>
+  <mo> ] </mo>
+</mrow>
+
+&emsp; &emsp; + &emsp; &emsp;		
+		<mrow>
+  <mo> [ </mo>
+  <mtable>
+    <mtr>
+      <mtd> <mn>10</mn> </mtd>
+      <mtd> <mn>11</mn> </mtd>
+      <mtd> <mn>12</mn> </mtd>
+      
+    </mtr>
+    <mtr>
+      <mtd> <mn>13</mn> </mtd>
+      <mtd> <mn>14</mn> </mtd>
+      <mtd> <mn>15</mn> </mtd>
+      
+    </mtr>
+    <mtr>
+      <mtd> <mn>16</mn> </mtd>
+      <mtd> <mn>17</mn> </mtd>
+      <mtd> <mn>18</mn> </mtd>
+      
+    </mtr>
+  </mtable>
+  <mo> ] </mo>
+</mrow>
+
+&emsp; &emsp; = &emsp; &emsp; 
+		<mrow>
+  <mo> [ </mo>
+  <mtable>
+    <mtr>
+      <mtd> <mn>-11</mn> </mtd>
+      <mtd> <mn>-13</mn> </mtd>
+      <mtd> <mn>-15</mn> </mtd>
+    </mtr>
+    <mtr>
+      <mtd> <mn>-17</mn> </mtd>
+      <mtd> <mn>-19</mn> </mtd>
+      <mtd> <mn>-21</mn> </mtd>
+      
+    </mtr>
+    <mtr>
+    	<mtd> <mn>-23</mn> </mtd>
+      <mtd> <mn>-25</mn> </mtd>
+      <mtd> <mn>-27</mn> </mtd>
+
+    </mtr>
+  </mtable>
+  <mo> ] </mo>
+</mrow>
+			
+      </math>
+  </div>
+
+In the above example, the first entry of the second matrix (10) was subtracted from the first entry of the first matrix (1) to make the first entry of the resulting matrix to equal -11. This was done for all entries. 
+
+
+<h3>Multiply by constant </h3>
+<p>We can a well multiply matrices by constant numbers. When doing so, we multiply each entry of the matrix by the constant given. <strong> For example:</strong></p>
+
+ <div style="margin-left: auto; margin-right: auto; text-align: center;">
+<math xmlns = "http://www.w3.org/1998/Math/MathML" >
+
+	5 &ensp;
+		<mrow>
+  <mo> [ </mo>
+  <mtable>
+    <mtr>
+      <mtd> <mn>1</mn> </mtd>
+      <mtd> <mn>2</mn> </mtd>
+      <mtd> <mn>3</mn> </mtd>
+      
+    </mtr>
+    <mtr>
+      <mtd> <mn>4</mn> </mtd>
+      <mtd> <mn>5</mn> </mtd>
+      <mtd> <mn>6</mn> </mtd>
+      
+    </mtr>
+    <mtr>
+      <mtd> <mn>7</mn> </mtd>
+      <mtd> <mn>8</mn> </mtd>
+      <mtd> <mn>9</mn> </mtd>
+    </mtr>
+  </mtable>
+  <mo> ] </mo>
+</mrow>
+
+&emsp; &emsp; = &emsp; &emsp; 
+<mrow>
+  <mo> [ </mo>
+  <mtable>
+    <mtr>
+      <mtd> <mn>5</mn> </mtd>
+      <mtd> <mn>10</mn> </mtd>
+      <mtd> <mn>15</mn> </mtd>
+    </mtr>
+    <mtr>
+      <mtd> <mn>20</mn> </mtd>
+      <mtd> <mn>25</mn> </mtd>
+      <mtd> <mn>30</mn> </mtd>
+      
+    </mtr>
+    <mtr>
+    	<mtd> <mn>35</mn> </mtd>
+      <mtd> <mn>40</mn> </mtd>
+      <mtd> <mn>45</mn> </mtd>
+
+    </mtr>
+  </mtable>
+  <mo> ] </mo>
+</mrow>
+			
+      </math>
+
+</div>
+
+<h3>Multiplication of matrices</h3>
+<p>Multiplication of matrices is less straightforward than the prior operations.</p>
+<p>The first thing that one has to note when multiplying matrices is the dimensions of the two matrices that one is multiplying. The order in which the two matrices are multiplied is important.</p>
+
+<p>Let us say that we have two matrices, matrix 'A' and matrix 'B'. Let's say that matrix A is a 3x2 matrix and matrix B is a 2x4 matrix.</p>
+<p>It is possible to perform AB, however, it is not possible to perform BA, this is because to be able to perform matrix multiplaction, the <strong>number of columns</strong> of the first matrix of the first matrix must match the <strong>number of rows</strong> of the second matrix. </p>
+<p>AB is possible because the number of columns of A (2) is the same as the number of rows of B (2), however, BA is <strong> not </strong> possible because the number of columns of B (4) is not the same as the number of rows of A (3).</p>
+
+
+<p></p>
+<p>To get to know how to multiply matrices, let's start with a simple example of multiplying a matrix with a vector. Let's have matrix A be a 3x3 matrix and B be a 3x1 matrix (a vector).</p>
+
+<div style="margin-left: auto; margin-right: auto; text-align: center;">
+<math xmlns = "http://www.w3.org/1998/Math/MathML" >
+
+	A &ensp; = &emsp;
+		<mrow>
+  <mo> [ </mo>
+  <mtable>
+    <mtr>
+      <mtd> <mn>1</mn> </mtd>
+      <mtd> <mn>2</mn> </mtd>
+      <mtd> <mn>3</mn> </mtd>
+      
+    </mtr>
+    <mtr>
+      <mtd> <mn>4</mn> </mtd>
+      <mtd> <mn>5</mn> </mtd>
+      <mtd> <mn>6</mn> </mtd>
+      
+    </mtr>
+    <mtr>
+      <mtd> <mn>7</mn> </mtd>
+      <mtd> <mn>8</mn> </mtd>
+      <mtd> <mn>9</mn> </mtd>
+    </mtr>
+  </mtable>
+  <mo> ] </mo>
+</mrow>
+
+
+&emsp; &emsp; B &ensp; = &emsp;
+		<mrow>
+  <mo> [ </mo>
+  <mtable>
+    <mtr>
+      
+      <mtd> <mn>2</mn> </mtd>
+      
+      
+    </mtr>
+    <mtr>
+     
+      <mtd> <mn>3</mn> </mtd> 
+      
+    </mtr>
+    <mtr>
+       <mtd> <mn>4</mn> </mtd>
+    </mtr>
+  </mtable>
+  <mo> ] </mo>
+</mrow> 
+</math>
+
+</div>
+
+Then, 
+<div style="margin-left: auto; margin-right: auto; text-align: center;">
+<math xmlns = "http://www.w3.org/1998/Math/MathML" >
+AB &ensp; = &emsp;
+		<mrow>
+  <mo> [ </mo>
+  <mtable>
+    <mtr>
+      <mtd> <mn>1</mn> </mtd>
+      <mtd> <mn>2</mn> </mtd>
+      <mtd> <mn>3</mn> </mtd>
+      
+    </mtr>
+    <mtr>
+      <mtd> <mn>4</mn> </mtd>
+      <mtd> <mn>5</mn> </mtd>
+      <mtd> <mn>6</mn> </mtd>
+      
+    </mtr>
+    <mtr>
+      <mtd> <mn>7</mn> </mtd>
+      <mtd> <mn>8</mn> </mtd>
+      <mtd> <mn>9</mn> </mtd>
+    </mtr>
+  </mtable>
+  <mo> ] </mo>
+</mrow>
+
+
+&emsp;
+		<mrow>
+  <mo> [ </mo>
+  <mtable>
+    <mtr>
+      
+      <mtd> <mn>2</mn> </mtd>
+      
+      
+    </mtr>
+    <mtr>
+     
+      <mtd> <mn>3</mn> </mtd> 
+      
+    </mtr>
+    <mtr>
+       <mtd> <mn>4</mn> </mtd>
+    </mtr>
+  </mtable>
+  <mo> ] </mo>
+</mrow> 
+</math>
+
+</div>
+
+To find AB, we can do think of this by first flipping B, such that the single column becomes a single row, such that:
+
+<div style="margin-left: auto; margin-right: auto; text-align: center;">
+<math xmlns = "http://www.w3.org/1998/Math/MathML" >
+B' &ensp; = &emsp;
+		<mrow>
+  <mo> [ </mo>
+  <mtable>
+    <mtr>
+      <mtd> <mn>2</mn> </mtd>
+      <mtd> <mn>3</mn> </mtd>
+      <mtd> <mn>4</mn> </mtd>
+      
+    </mtr>
+  </mtable>
+  <mo> ] </mo>
+</mrow>
+
+</math>
+</div>
+We can then find AB, by multiplying the 1st column of A with the first entry of B' and adding this with the product of the 2nd column of A and the second entry of B' and additionally, the 3rd column of A with the third entry of B', such that:
+<div style="margin-left: auto; margin-right: auto; text-align: center;">
+<math xmlns = "http://www.w3.org/1998/Math/MathML" >
+AB &ensp; = &emsp;
+		2 &ensp;<mrow>
+  <mo> [ </mo>
+  <mtable>
+    <mtr>
+      <mtd> <mn>1</mn> </mtd>
+
+    </mtr>
+    <mtr>
+      <mtd> <mn>4</mn> </mtd>
+      
+    </mtr>
+    <mtr>
+      <mtd> <mn>7</mn> </mtd>
+    </mtr>
+  </mtable>
+  <mo> ] </mo>
+</mrow>
+
+&emsp; + &emsp;
+
+3 &ensp;<mrow>
+  <mo> [ </mo>
+  <mtable>
+    <mtr>
+      <mtd> <mn>2</mn> </mtd>
+
+    </mtr>
+    <mtr>
+      <mtd> <mn>5</mn> </mtd>
+      
+    </mtr>
+    <mtr>
+      <mtd> <mn>8</mn> </mtd>
+    </mtr>
+  </mtable>
+  <mo> ] </mo>
+</mrow>
+
+&emsp; + &emsp;
+
+4 &ensp;<mrow>
+  <mo> [ </mo>
+  <mtable>
+    <mtr>
+      <mtd> <mn>3</mn> </mtd>
+
+    </mtr>
+    <mtr>
+      <mtd> <mn>6</mn> </mtd>
+      
+    </mtr>
+    <mtr>
+      <mtd> <mn>9</mn> </mtd>
+    </mtr>
+  </mtable>
+  <mo> ] </mo>
+</mrow>
+
+&emsp; = &emsp;
+
+<mrow>
+  <mo> [ </mo>
+  <mtable>
+    <mtr>
+      <mtd> <mn>20</mn> </mtd>
+
+    </mtr>
+    <mtr>
+      <mtd> <mn>47</mn> </mtd>
+      
+    </mtr>
+    <mtr>
+      <mtd> <mn>74</mn> </mtd>
+    </mtr>
+  </mtable>
+  <mo> ] </mo>
+</mrow>
+</math>
+</div>
+
+For finding AB, when there is more than 1 column of B, the basic prodedure as above for finding AB remains. 
+Let's say now that AB is:
+<div style="margin-left: auto; margin-right: auto; text-align: center;">
+<math xmlns = "http://www.w3.org/1998/Math/MathML" >
+AB &ensp; = &emsp;
+		<mrow>
+  <mo> [ </mo>
+  <mtable>
+    <mtr>
+      <mtd> <mn>1</mn> </mtd>
+      <mtd> <mn>2</mn> </mtd>
+      <mtd> <mn>3</mn> </mtd>
+      
+    </mtr>
+    <mtr>
+      <mtd> <mn>4</mn> </mtd>
+      <mtd> <mn>5</mn> </mtd>
+      <mtd> <mn>6</mn> </mtd>
+      
+    </mtr>
+    <mtr>
+      <mtd> <mn>7</mn> </mtd>
+      <mtd> <mn>8</mn> </mtd>
+      <mtd> <mn>9</mn> </mtd>
+    </mtr>
+  </mtable>
+  <mo> ] </mo>
+</mrow>
+
+
+&emsp;
+		<mrow>
+  <mo> [ </mo>
+  <mtable>
+    <mtr>
+      
+      <mtd> <mn>2</mn> </mtd>
+      <mtd> <mn>5</mn> </mtd>
+      
+    </mtr>
+    <mtr>
+     
+      <mtd> <mn>3</mn> </mtd> 
+      <mtd> <mn>6</mn> </mtd>
+    </mtr>
+    <mtr>
+       <mtd> <mn>4</mn> </mtd>
+       <mtd> <mn>7</mn> </mtd>
+    </mtr>
+  </mtable>
+  <mo> ] </mo>
+</mrow> 
+</math>
+
+</div>
+
+<p>To do this, we can just separate the columns of B into B' (for the first column) and B'' (for the second column) and find AB' and AB''. The resulting matrix AB will then be a matrix, where its first column is the product of AB' and its second column is the product of AB''.</p>
+
+<p>Then, we'll have: </p>
+<div style="margin-left: auto; margin-right: auto; text-align: center;">
+<math xmlns = "http://www.w3.org/1998/Math/MathML" >
+AB' &ensp; = &emsp;
+		<mrow>
+  <mo> [ </mo>
+  <mtable>
+    <mtr>
+      <mtd> <mn>1</mn> </mtd>
+      <mtd> <mn>2</mn> </mtd>
+      <mtd> <mn>3</mn> </mtd>
+      
+    </mtr>
+    <mtr>
+      <mtd> <mn>4</mn> </mtd>
+      <mtd> <mn>5</mn> </mtd>
+      <mtd> <mn>6</mn> </mtd>
+      
+    </mtr>
+    <mtr>
+      <mtd> <mn>7</mn> </mtd>
+      <mtd> <mn>8</mn> </mtd>
+      <mtd> <mn>9</mn> </mtd>
+    </mtr>
+  </mtable>
+  <mo> ] </mo>
+</mrow>
+
+
+&emsp;
+		<mrow>
+  <mo> [ </mo>
+  <mtable>
+    <mtr>
+      
+      <mtd> <mn>2</mn> </mtd>
+      
+      
+    </mtr>
+    <mtr>
+     
+      <mtd> <mn>3</mn> </mtd> 
+      
+    </mtr>
+    <mtr>
+       <mtd> <mn>4</mn> </mtd>
+       
+    </mtr>
+  </mtable>
+  <mo> ] </mo>
+</mrow> 
+
+&ensp; = &emsp;
+2 &ensp;<mrow>
+  <mo> [ </mo>
+  <mtable>
+    <mtr>
+      <mtd> <mn>1</mn> </mtd>
+
+    </mtr>
+    <mtr>
+      <mtd> <mn>4</mn> </mtd>
+      
+    </mtr>
+    <mtr>
+      <mtd> <mn>7</mn> </mtd>
+    </mtr>
+  </mtable>
+  <mo> ] </mo>
+</mrow>
+
+&emsp; + &emsp;
+
+3 &ensp;<mrow>
+  <mo> [ </mo>
+  <mtable>
+    <mtr>
+      <mtd> <mn>2</mn> </mtd>
+
+    </mtr>
+    <mtr>
+      <mtd> <mn>5</mn> </mtd>
+      
+    </mtr>
+    <mtr>
+      <mtd> <mn>8</mn> </mtd>
+    </mtr>
+  </mtable>
+  <mo> ] </mo>
+</mrow>
+
+&emsp; + &emsp;
+
+4 &ensp;<mrow>
+  <mo> [ </mo>
+  <mtable>
+    <mtr>
+      <mtd> <mn>3</mn> </mtd>
+
+    </mtr>
+    <mtr>
+      <mtd> <mn>6</mn> </mtd>
+      
+    </mtr>
+    <mtr>
+      <mtd> <mn>9</mn> </mtd>
+    </mtr>
+  </mtable>
+  <mo> ] </mo>
+</mrow>
+
+&emsp; = &emsp;
+
+<mrow>
+  <mo> [ </mo>
+  <mtable>
+    <mtr>
+      <mtd> <mn>20</mn> </mtd>
+
+    </mtr>
+    <mtr>
+      <mtd> <mn>47</mn> </mtd>
+      
+    </mtr>
+    <mtr>
+      <mtd> <mn>74</mn> </mtd>
+    </mtr>
+  </mtable>
+  <mo> ] </mo>
+</mrow>
+
+</math>
+
+</div>
+
+<div style="margin-left: auto; margin-right: auto; text-align: center;">
+<math xmlns = "http://www.w3.org/1998/Math/MathML" >
+AB'' &ensp; = &emsp;
+		<mrow>
+  <mo> [ </mo>
+  <mtable>
+    <mtr>
+      <mtd> <mn>1</mn> </mtd>
+      <mtd> <mn>2</mn> </mtd>
+      <mtd> <mn>3</mn> </mtd>
+      
+    </mtr>
+    <mtr>
+      <mtd> <mn>4</mn> </mtd>
+      <mtd> <mn>5</mn> </mtd>
+      <mtd> <mn>6</mn> </mtd>
+      
+    </mtr>
+    <mtr>
+      <mtd> <mn>7</mn> </mtd>
+      <mtd> <mn>8</mn> </mtd>
+      <mtd> <mn>9</mn> </mtd>
+    </mtr>
+  </mtable>
+  <mo> ] </mo>
+</mrow>
+
+
+&emsp;
+		<mrow>
+  <mo> [ </mo>
+  <mtable>
+    <mtr>
+      
+      <mtd> <mn>5</mn> </mtd>
+      
+      
+    </mtr>
+    <mtr>
+     
+      <mtd> <mn>6</mn> </mtd> 
+      
+    </mtr>
+    <mtr>
+       <mtd> <mn>7</mn> </mtd>
+       
+    </mtr>
+  </mtable>
+  <mo> ] </mo>
+</mrow> 
+
+&ensp; = &emsp;
+5 &ensp;<mrow>
+  <mo> [ </mo>
+  <mtable>
+    <mtr>
+      <mtd> <mn>1</mn> </mtd>
+
+    </mtr>
+    <mtr>
+      <mtd> <mn>4</mn> </mtd>
+      
+    </mtr>
+    <mtr>
+      <mtd> <mn>7</mn> </mtd>
+    </mtr>
+  </mtable>
+  <mo> ] </mo>
+</mrow>
+
+&emsp; + &emsp;
+
+6 &ensp;<mrow>
+  <mo> [ </mo>
+  <mtable>
+    <mtr>
+      <mtd> <mn>2</mn> </mtd>
+
+    </mtr>
+    <mtr>
+      <mtd> <mn>5</mn> </mtd>
+      
+    </mtr>
+    <mtr>
+      <mtd> <mn>8</mn> </mtd>
+    </mtr>
+  </mtable>
+  <mo> ] </mo>
+</mrow>
+
+&emsp; + &emsp;
+
+7 &ensp;<mrow>
+  <mo> [ </mo>
+  <mtable>
+    <mtr>
+      <mtd> <mn>3</mn> </mtd>
+
+    </mtr>
+    <mtr>
+      <mtd> <mn>6</mn> </mtd>
+      
+    </mtr>
+    <mtr>
+      <mtd> <mn>9</mn> </mtd>
+    </mtr>
+  </mtable>
+  <mo> ] </mo>
+</mrow>
+
+&emsp; = &emsp;
+
+<mrow>
+  <mo> [ </mo>
+  <mtable>
+    <mtr>
+      <mtd> <mn>38</mn> </mtd>
+
+    </mtr>
+    <mtr>
+      <mtd> <mn>192</mn> </mtd>
+      
+    </mtr>
+    <mtr>
+      <mtd> <mn>146</mn> </mtd>
+    </mtr>
+  </mtable>
+  <mo> ] </mo>
+</mrow>
+
+</math>
+
+</div>
+
+AB will then be:
+<div style="margin-left: auto; margin-right: auto; text-align: center;">
+<math xmlns = "http://www.w3.org/1998/Math/MathML" >
+AB &ensp; = &emsp;
+		<mrow>
+  <mo> [ </mo>
+  <mtable>
+    <mtr>
+      <mtd> <mn>20</mn> </mtd>
+      <mtd> <mn>38</mn> </mtd>
+      
+      
+    </mtr>
+    <mtr>
+      <mtd> <mn>47</mn> </mtd>
+      <mtd> <mn>192</mn> </mtd>
+      
+      
+    </mtr>
+    <mtr>
+      <mtd> <mn>74</mn> </mtd>
+      <mtd> <mn>146</mn> </mtd>
+      
+    </mtr>
+  </mtable>
+  <mo> ] </mo>
+</mrow>
+</math>
+
+</div>
+
+<p>Notice how the number of rows for the resulting matrix was the same as the number of rows of matrix A. And as well how the number of columns of the resulting matrix is the same as the number of columns as B, in both cases. This actually generalizes to all dimensions of matrices, such that:</p>
+<p> when finding the product of matrix A with dimensions nxm and matrix B with dimensions pxq, we can find AB if and only if m=p (# columns of A = # rows of B) and the resulting matrix AB will have dimensions nxq (same number of rows as A and same number of columns as B).</p>
+
+<p></p>
+
+<p>There is an exception, however, and this is when we are multiplying two vectors together. When doing so, all that matters is that the two vectors have the same number of rows. The result will be a single value.</p>
+<p>To multiply vectors, we multiply the first entry of the first vector with the first entry of the second vector and add it to the product of the second entry of the first vector with the second entry of the second vector, and so on. For example: </p>
+
+<div style="margin-left: auto; margin-right: auto; text-align: center;">
+<math xmlns = "http://www.w3.org/1998/Math/MathML" >
+		<mrow>
+  <mo> [ </mo>
+  <mtable>
+    <mtr>
+      <mtd> <mn>1</mn> </mtd>
+      
+      
+    </mtr>
+    <mtr>
+      <mtd> <mn>2</mn> </mtd>
+      
+      
+      
+    </mtr>
+    <mtr>
+      <mtd> <mn>3</mn> </mtd>
+      
+      
+    </mtr>
+  </mtable>
+  <mo> ] </mo>
+</mrow>
+&emsp;*&emsp;
+<mrow>
+  <mo> [ </mo>
+  <mtable>
+    <mtr>
+      <mtd> <mn>4</mn> </mtd>
+      
+      
+    </mtr>
+    <mtr>
+      <mtd> <mn>5</mn> </mtd>
+      
+      
+      
+    </mtr>
+    <mtr>
+      <mtd> <mn>6</mn> </mtd>
+      
+      
+    </mtr>
+  </mtable>
+  <mo> ] </mo>
+</mrow>
+
+&emsp; = &emsp;
+
+(1*4) + (2*5) + (3*6) &emsp; = &emsp; 32
+
+</math>
+
+</div>
+
+
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
     <h1 class="h2">Notations For ML</h1></div>
 
