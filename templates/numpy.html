@@ -115,17 +115,16 @@
 
 
     <!-- For Thebe -->
-  <script type="text/x-thebe-config">
-{
+  <!-- Configure and load Thebe !-->
+<script type="text/x-thebe-config">
+  {
     requestKernel: true,
     binderOptions: {
-        repo: "binder-examples/requirements",
+      repo: "binder-examples/requirements",
     },
-    kernelOptions: {
-  kernelName: "python3",
-},
-}
+  }
 </script>
+
 
 <script src="https://unpkg.com/thebe@latest/lib/index.js" ></script>
 
@@ -138,9 +137,90 @@ var bootstrapThebe = function() {
 document.querySelector("#activateButton").addEventListener('click', bootstrapThebe)
 </script>
 
-    <pre data-executable="true" data-language="python">print("Hello World!")</pre>
+<p>NumPy is a powerful Python library for scientific computing. Central to the NumPy library is its ndarray object which is an array with multiple dimensions. This module will focus on using the ndarray objects as matrix representations, advantages of using as so is that NumPy already has an assortment of routines for fast operations on arrays, including mathematical, logical, shape manipulation, and basic linear algebra. </p>
+<p>To create a numpy project we must first import the numpy library into our project. We can do so as below. You can just run the cell below and wait until the 'Waiting For Kernel' message is gone.</p>
 
-    <pre data-executable="true" data-language="python">print("Hello World!")</pre>
+<pre data-executable="true" data-language="python">import numpy as np</pre>
+<p>Note that numpy a lot of time is always imported with the 'np' alias.</p>
+<p></p>
+
+<h3>Making Matrices and Vectors</h3>
+To make matrices and vectors, we use the numpy.array function which will convert objects such as lists into ndarray objects. 
+<p>In numpy, the entries of a single list will represent the entries of a single row of the matrix. For example a 5x1 matrix can be made as below  </p>
+
+    <pre data-executable="true" data-language="python">
+    a = np.array([1,2,3,4,5])
+print(a)
+    </pre>
+
+    When dealing with matrices with more than one row, we need to give the numpy.array function a list of lists objects. In the list of lists, the first list will be the first row of the matrix, the second list will be the second row and so on. For example:
+    <pre data-executable="true" data-language="python"> 
+    
+    b = np.array([[1,2,3], [4,5,6], [7,8,9]])
+print(b)
+    </pre>
+
+    <p>We can find the dimensions of the given matrix by usig the shape function. This will return a tuple of 2 elements, where the first element is the number of rows and the second element is the number of columns. For instance, for our already made matrices, we can find their dimensions as:</p>
+    <pre data-executable="true" data-language="python"> 
+    
+    print(np.shape(a))
+print(np.shape(b))
+    </pre>
+
+<h3>Matrix Indexing</h3>
+<p>We can index the entries of the matrix just as we would a list. Different ways of indexing are as follows:</p>
+<pre data-executable="true" data-language="python">
+# get the second element of a
+print(a[1], '\n')
+
+#get the element in row 1 and column 2 of b
+print(b[0,1], '\n')
+
+#get the second row of b
+print(b[1,:], '\n')
+
+# get the third column of b
+print(b[:,2], '\n')
+   
+    </pre>
+
+<h3>Matrix Operatiions</h3>
+We can perform the same matrix operations that we've learned before. 
+
+<h4>Matrix addition</h4>
+We can do so, by just using the plus operator between matrices. For example
+<pre data-executable="true" data-language="python">
+c = np.array([[10,11,12], [13,14,15], [16,17,18]])
+d = b + c
+print(d)
+</pre>
+
+<h4>Matrix subtraction</h4>
+We can do so, by just using the minus operator between matrices. For example
+<pre data-executable="true" data-language="python">
+d = b - c
+print(d)
+</pre>
+
+
+<h4>Multiply by a constant</h4>
+We can do so, by just using the * operator before the matrix. For example
+<pre data-executable="true" data-language="python">
+d = 5 * b
+print(d)
+</pre>
+
+<h4>Matrix multiplication</h4>
+We can do so, by using the np.dot function. For example
+<pre data-executable="true" data-language="python">
+e = np.array([[2,5], [3,6], [4,7]])
+d = np.dot(b,e)
+print(d)
+</pre>
+
+
+
+
 
 
   </div>
