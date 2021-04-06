@@ -32,7 +32,7 @@ app.debug = True
 
 @app.errorhandler(Exception)
 def handle_auth_error(ex):
-	print('start page')
+	print('auth-error')
 	response = jsonify(message=str(ex))
 	response.status_code = (ex.code if isinstance(ex, HTTPException) else 500)
 	return response
@@ -54,6 +54,7 @@ auth0 = oauth.register(
 def requires_auth(f):
 	@wraps(f)
 	def decorated(*args, **kwargs):
+		print("requires_auth")
 		if constants.PROFILE_KEY not in session:
 			return redirect('/index')
 		return f(*args, **kwargs)
