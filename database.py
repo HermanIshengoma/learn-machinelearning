@@ -8,10 +8,10 @@ import os, json, pytz
 import psycopg2
 from config import config
 import logging
-from chapter import Chapter
+#from chapter import Chapter
 
 DATABASE_URL = os.environ.get('DATABASE_URL')
-CHAPTER_IDS = os.environ.get('CHAPTER_IDS').split(',')
+#CHAPTER_IDS = os.environ.get('CHAPTER_IDS').split(',')
 
 #------------------------------------------------------------------------
 

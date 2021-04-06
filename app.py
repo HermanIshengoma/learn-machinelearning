@@ -64,7 +64,7 @@ def requires_auth(f):
 # intro page
 @app.route('/', methods=['GET'])
 def start_page():
-	print('start page1')
+	print('start page')
 	html = render_template('index.html')
 	return html
 
