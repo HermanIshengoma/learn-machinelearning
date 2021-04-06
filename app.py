@@ -10,6 +10,7 @@ from flask_bootstrap import Bootstrap
 from authlib.integrations.flask_client import OAuth
 from six.moves.urllib.parse import urlencode
 from database import Database
+from dotenv import load_dotenv, find_dotenv
 
 import constants
 
