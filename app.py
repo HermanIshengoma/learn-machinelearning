@@ -83,9 +83,9 @@ def callback_handling():
 	}
 
     # dealing with the database
-    database = Database(app)
-    database.connect()
-    userinfo=session[constants.PROFILE_KEY]
+	database = Database(app)
+	database.connect()
+	userinfo=session[constants.PROFILE_KEY]
 	user_id=userinfo['user_id']
 
 	success = database.user_exist(user_id)
