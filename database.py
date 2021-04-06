@@ -45,7 +45,7 @@ class Database:
 		try:
 			cur = self._conn.cursor()
 		    # username = str(username)
-			cmd = "SELECT user_id FROM public.\"user\" WHERE user_id = CAST((%s) as text)"
+			cmd = "SELECT id FROM public.\"user\" WHERE id = CAST((%s) as text)"
 			cur.execute(cmd, (user_id, ))
 			if cur.fetchone() is None:
 				cmd2 = "INSERT INTO public.\"user\" (id, " + \
