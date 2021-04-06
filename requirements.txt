@@ -8,3 +8,6 @@ Werkzeug==1.0.0
 gunicorn==19.9.0
 psycopg2-binary==2.8.4
 python-dotenv
+authlib>=0.14.1
+six
+requests
