@@ -32,6 +32,7 @@ app.debug = True
 
 @app.errorhandler(Exception)
 def handle_auth_error(ex):
+	print('start page')
     response = jsonify(message=str(ex))
     response.status_code = (ex.code if isinstance(ex, HTTPException) else 500)
     return response
