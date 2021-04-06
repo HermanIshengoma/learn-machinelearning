@@ -41,7 +41,7 @@ class Database:
 
 
     # add user if does not exist in database
-    def user_exist(self, user_id):
+	def user_exist(self, user_id):
 		try:
 			cur = self._conn.cursor()
 		    # username = str(username)
@@ -66,7 +66,7 @@ class Database:
 
 
     # update username in database
-    def update_username(self, new_username, user_id):
+	def update_username(self, new_username, user_id):
 		try:
 			cur = self._conn.cursor()
 			cmd = "UPDATE public.\"users\" " + \
