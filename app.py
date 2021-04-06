@@ -33,32 +33,32 @@ app.debug = True
 @app.errorhandler(Exception)
 def handle_auth_error(ex):
 	print('start page')
-    response = jsonify(message=str(ex))
-    response.status_code = (ex.code if isinstance(ex, HTTPException) else 500)
-    return response
+	response = jsonify(message=str(ex))
+	response.status_code = (ex.code if isinstance(ex, HTTPException) else 500)
+	return response
 
 oauth = OAuth(app)
 
 auth0 = oauth.register(
-    'auth0',
-    client_id=AUTH0_CLIENT_ID,
-    client_secret=AUTH0_CLIENT_SECRET,
-    api_base_url=AUTH0_BASE_URL,
-    access_token_url=AUTH0_BASE_URL + '/oauth/token',
-    authorize_url=AUTH0_BASE_URL + '/authorize',
-    client_kwargs={
-        'scope': 'openid profile email',
-    },
+	'auth0',
+	client_id=AUTH0_CLIENT_ID,
+	client_secret=AUTH0_CLIENT_SECRET,
+	api_base_url=AUTH0_BASE_URL,
+	access_token_url=AUTH0_BASE_URL + '/oauth/token',
+	authorize_url=AUTH0_BASE_URL + '/authorize',
+	client_kwargs={
+		'scope': 'openid profile email',
+	},
 )
 
 def requires_auth(f):
-    @wraps(f)
-    def decorated(*args, **kwargs):
-        if constants.PROFILE_KEY not in session:
-            return redirect('/index')
-        return f(*args, **kwargs)
+	@wraps(f)
+	def decorated(*args, **kwargs):
+		if constants.PROFILE_KEY not in session:
+			return redirect('/index')
+		return f(*args, **kwargs)
 
-    return decorated
+	return decorated
 
 # intro page
 @app.route('/', methods=['GET'])
@@ -70,42 +70,42 @@ def start_page():
 
 @app.route('/callback')
 def callback_handling():
-    auth0.authorize_access_token()
-    resp = auth0.get('userinfo')
-    userinfo = resp.json()
+	auth0.authorize_access_token()
+	resp = auth0.get('userinfo')
+	userinfo = resp.json()
 
-    session[constants.JWT_PAYLOAD] = userinfo
-    session[constants.PROFILE_KEY] = {
-        'user_id': userinfo['sub'],
-        'name': userinfo['name'],
-        'picture': userinfo['picture']
-    }
+	session[constants.JWT_PAYLOAD] = userinfo
+	session[constants.PROFILE_KEY] = {
+		'user_id': userinfo['sub'],
+		'name': userinfo['name'],
+		'picture': userinfo['picture']
+	}
 
     # dealing with the database
     database = Database(app)
-    database.connect()
-    userinfo=session[constants.PROFILE_KEY]
-    user_id=userinfo['user_id']
+	database.connect()
+	userinfo=session[constants.PROFILE_KEY]
+	user_id=userinfo['user_id']
 
-    success = database.user_exist(user_id)
-    if success is False:
-        new_username = "Stranger"
-        database.update_username(new_username, user_id)
-    database.disconnect()
+	success = database.user_exist(user_id)
+	if success is False:
+		new_username = "Stranger"
+		database.update_username(new_username, user_id)
+	database.disconnect()
 
-    return redirect('/main')
+	return redirect('/main')
 
 
 @app.route('/login')
 def login():
-    return auth0.authorize_redirect(redirect_uri=AUTH0_CALLBACK_URL, audience=AUTH0_AUDIENCE)
+	return auth0.authorize_redirect(redirect_uri=AUTH0_CALLBACK_URL, audience=AUTH0_AUDIENCE)
 
 
 @app.route('/logout')
 def logout():
-    session.clear()
-    params = {'returnTo': url_for('home', _external=True), 'client_id': AUTH0_CLIENT_ID}
-    return redirect(auth0.api_base_url + '/v2/logout?' + urlencode(params))
+	session.clear()
+	params = {'returnTo': url_for('home', _external=True), 'client_id': AUTH0_CLIENT_ID}
+	return redirect(auth0.api_base_url + '/v2/logout?' + urlencode(params))
 
 
 # linear algebra module
