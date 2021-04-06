@@ -49,7 +49,7 @@ class Database:
 			cur.execute(cmd, (user_id, ))
 			if cur.fetchone() is None:
 				cmd2 = "INSERT INTO public.\"user\" (id, " + \
-						"name)  " + \
+						"name, pic, joined, beginner, linear, numpy, reg, final)  " + \
 						"VALUES (%s, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)"
 				cur.execute(cmd2, (user_id, ))
 				self._conn.commit()
