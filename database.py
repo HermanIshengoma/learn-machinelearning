@@ -45,7 +45,7 @@ class Database:
 		try:
 			cur = self._conn.cursor()
 		    # username = str(username)
-			cmd = "SELECT user_id FROM public.\"users\" WHERE user_id = CAST((%s) as text)"
+			cmd = "SELECT user_id FROM public.\"user\" WHERE user_id = CAST((%s) as text)"
 			cur.execute(cmd, (user_id, ))
 			if cur.fetchone() is None:
 				cmd2 = "INSERT INTO public.\"user\" (id, " + \
@@ -69,7 +69,7 @@ class Database:
 	def update_username(self, new_username, user_id):
 		try:
 			cur = self._conn.cursor()
-			cmd = "UPDATE public.\"users\" " + \
+			cmd = "UPDATE public.\"user\" " + \
 					"SET name = CAST((%s) as text) " + \
 					"WHERE id = CAST((%s) as text)"
 			cur.execute(cmd, [new_username, user_id, ])
