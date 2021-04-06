@@ -56,8 +56,8 @@ class Database:
 				cur.close()
 				return False
 
-		   	cur.close()
-		    return True
+			cur.close()
+			return True
 		except (Exception, psycopg2.DatabaseError) as error:
 			if self._app is not None:
 	       		self._app.logger.warning(str(error))
