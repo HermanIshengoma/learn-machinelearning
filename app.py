@@ -127,5 +127,10 @@ def programming_page():
 	html = render_template('programming.html')
 	return html
 
+@app.route('/linear_assignment', methods=['GET'])
+def lin_assignment_page():
+	html = render_template('Lin_assignment.html')
+	return html
+
 if __name__ == "__main__":
 	app.run()
