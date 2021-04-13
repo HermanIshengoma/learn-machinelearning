@@ -127,7 +127,7 @@ def numpy_page():
 	html = render_template('numpy.html')
 	return html
 
-FOLDER = os.path.join('templates')
+#FOLDER = os.path.join('templates')
 # programming module
 @app.route('/programming', methods=['GET'])
 def programming_page():
