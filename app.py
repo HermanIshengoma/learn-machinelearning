@@ -139,8 +139,8 @@ def lin_assignment_page():
 
 # numpy test
 @app.route('/numpy_assignment', methods=['GET'])
-def guide_page():
-	html = render_template('numpy.html')
+def numpy_test_page():
+	html = render_template('numpy_test.html')
 	return html
 
 if __name__ == "__main__":
