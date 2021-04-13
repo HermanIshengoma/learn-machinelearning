@@ -126,10 +126,12 @@ def numpy_page():
 	html = render_template('numpy.html')
 	return html
 
+FOLDER = os.path.join('templates')
 # programming module
 @app.route('/programming', methods=['GET'])
 def programming_page():
-	html = render_template('programming.html')
+	file1 = os.path.join(app.config['UPLOAD_FOLDER'], 'grad_cost.png')
+	html = render_template('programming.html', user_image=file1)
 	return html
 
 @app.route('/linear_assignment', methods=['GET'])
@@ -141,7 +143,6 @@ def lin_assignment_page():
 @app.route('/numpy_assignment', methods=['GET'])
 def numpy_test_page():
 	html = render_template('numpy_test.html')
-	return html
 
 if __name__ == "__main__":
 	app.run()
