@@ -9,7 +9,7 @@
     <title>Dashboard Template · Bootstrap v5.0</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
-    <script type=”text/javascript” src=”https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML”></script>
+
     
 
     <!-- Bootstrap core CSS -->
@@ -29,20 +29,6 @@
           font-size: 3.5rem;
         }
       }
-
-      div.vertical-line{
-      width: 1px; /* Line width */
-      background-color: black; /* Line color */
-      height: 25%; /* Override in-line if you want specific height. */
-      display:inline-block;
-      /*float: left; /* Causes the line to float to left of content. 
-        You can instead use position:absolute or display:inline-block
-        if this fits better with your design */}
-      
-      your_col{
-        border-left: 3px solid black;
-      }
-
     </style>
 
     
@@ -94,23 +80,19 @@
     <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
       <div class="position-sticky pt-3">
         <ul class="nav flex-column">
-          <li class="nav-item">
-             <span data-feather="home"></span>
+          <span data-feather="home"></span>
              GUIDE
              <li class="nav-item">
             <a class="nav-link" aria-current="page" href="guide">
-              <span data-feather="file"></span>
+              <span data-feather="home"></span>
               Guide
             </a>
             </li>
-
-            <p></p>
-
+            
             <span data-feather="file"></span>
             MODULES
-          
             <a class="nav-link" aria-current="page" href="main">
-              <span data-feather="home"></span>
+              <span data-feather="file"></span>
               Linear Algebra
             </a>
           </li>
@@ -128,24 +110,25 @@
           </li>
 
           <p></p>
-          <p></p>
           <li class="nav-item">
             <span data-feather="home"></span>
             ASSIGNMENTS
           </li>
 
           <li class="nav-item">
-            <a class="nav-link active" href="linear_assignment">
-              <span data-feather="home"></span>
+            <a class="nav-link" href="linear_assignment">
+              <span data-feather="shopping-cart"></span>
               Linear Algebra Assignment
             </a>
           </li>
+
           <li class="nav-item">
-            <a class="nav-link" href="numpy_assignment">
+            <a class="nav-link active" href="numpy_assignment">
               <span data-feather="shopping-cart"></span>
               Numpy Assignment
             </a>
           </li>
+
           <li class="nav-item">
             <a class="nav-link" href="linear_regression_assignment">
               <span data-feather="shopping-cart"></span>
@@ -159,19 +142,45 @@
               Final Assignment
             </a>
           </li>
+
           
         </ul>
       </div>
     </nav>
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+      <style>
+    h1 {text-align: center;}
+  </style>
 
-    <h1 class="h2">Linear Algebra Assignment</h1> 
-    </div> 
-    <iframe name='proprofs' id='proprofs' width='550' height='650' frameborder=0 marginwidth=0 marginheight=0 src='https://www.proprofs.com/quiz-school/story.php?title=math-quiz-template_3339xs&id=3123937&ew=530'></iframe><div style='font-size:10px; font-family:Arial, Helvetica, sans-serif; color:#000;text-align:left;'><a href='https://www.proprofs.com/quiz-school/story.php?title=math-quiz-template_3339xs' target='_blank' title='Linear Algebra Quiz by ProProfs'>Linear Algebra Quiz by ProProfs</a></div>
+    <h1 class="h2">Guide</h1> 
+    </div>
+    <style>
+    p {text-align: center;}
+    h2 {text-align: center;}
+  </style>
 
+  <h2>Numpy assignment. </h2>
+
+  <p>To do the numpy assignment, download the document below.</p>
+
+  <p><a href="https://colab.research.google.com/drive/1ut3B65rd6RcbxI5eBOyq2NwQOmiLHg-D?usp=sharing"> NUMPY ASSIGNMENT </a></p>
+
+  <p>The link sends you to Google Collab which is an application that enables its users to execute Python code.</p>
+
+  <p>Please copy the file to your own Collab before writing attempting the exercise. Once you complete it, share the file to the email: hermani@princeton.edu</p>
+
+  <p>Useful shortcuts for Google Collab:</p>
+    
+    
+
+
+
+
+  
   </main>
-</div>
-</div>
-</body>
-</html>
+
+
+
+  </body>
+  </html>
