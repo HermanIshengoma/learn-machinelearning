@@ -94,7 +94,7 @@ def callback_handling():
 		database.update_username(new_username, user_id)
 	database.disconnect()
 
-	return redirect('/main')
+	return redirect('/guide')
 
 
 @app.route('/login')
@@ -108,6 +108,11 @@ def logout():
 	params = {'returnTo': url_for('home', _external=True), 'client_id': AUTH0_CLIENT_ID}
 	return redirect(auth0.api_base_url + '/v2/logout?' + urlencode(params))
 
+# guide
+@app.route('/guide', methods=['GET'])
+def main_page():
+	html = render_template('hello.html')
+	return html
 
 # linear algebra module
 @app.route('/main', methods=['GET'])
