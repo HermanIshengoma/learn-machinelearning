@@ -1,6 +1,6 @@
 from functools import wraps
 import json
-import os
+#import os
 from os import environ as env
 from werkzeug.exceptions import HTTPException
 
@@ -131,8 +131,8 @@ FOLDER = os.path.join('templates')
 # programming module
 @app.route('/programming', methods=['GET'])
 def programming_page():
-	file1 = os.path.join(app.config['UPLOAD_FOLDER'], 'grad_cost.png')
-	html = render_template('programming.html', user_image=file1)
+	#file1 = os.path.join(app.config['UPLOAD_FOLDER'], 'grad_cost.png')
+	html = render_template('programming.html')
 	return html
 
 @app.route('/linear_assignment', methods=['GET'])
