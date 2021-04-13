@@ -110,7 +110,7 @@ def logout():
 
 # guide
 @app.route('/guide', methods=['GET'])
-def main_page():
+def guide_page():
 	html = render_template('hello.html')
 	return html
 
