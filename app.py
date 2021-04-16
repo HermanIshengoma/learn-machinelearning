@@ -148,7 +148,7 @@ def numpy_test_page():
 
 # Linear reg assignment
 @app.route('/linear_regression_assignment', methods=['GET'])
-def reg_test_page():
+def reg_test_theory_page():
 	html = render_template('reg_theory.html')
 	return html
 
