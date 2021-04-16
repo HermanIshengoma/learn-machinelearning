@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.80.0">
+    <title>Dashboard Template · Bootstrap v5.0</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
+    <script type=”text/javascript” src=”https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML”></script>
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="{{url_for('static', filename='bootstrap.min.css')}}" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      div.vertical-line{
+      width: 1px; /* Line width */
+      background-color: black; /* Line color */
+      height: 25%; /* Override in-line if you want specific height. */
+      display:inline-block;
+      /*float: left; /* Causes the line to float to left of content. 
+        You can instead use position:absolute or display:inline-block
+        if this fits better with your design */}
+      
+      your_col{
+        border-left: 3px solid black;
+      }
+
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="{{url_for('static', filename='dashboard.css')}}" rel="stylesheet">
+  </head>
+  <body>
+    <!-- CHANGE NAVBAR HERE-->
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Learn Machine Learning</a>
+  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+  <ul class="navbar-nav px-3">
+    <li class="nav-item text-nowrap">
+      <a class="nav-link" href="#">Sign out</a>
+    </li>
+  </ul>
+</header>
+
+<!--nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav-->
+
+<div class="container-fluid">
+  <div class="row">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <div class="position-sticky pt-3">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+             <span data-feather="home"></span>
+             GUIDE
+             <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="guide">
+              <span data-feather="file"></span>
+              Guide
+            </a>
+            </li>
+
+            <p></p>
+
+            <span data-feather="file"></span>
+            MODULES
+          
+            <a class="nav-link" aria-current="page" href="main">
+              <span data-feather="home"></span>
+              Linear Algebra
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="numpy">
+              <span data-feather="file"></span>
+              Numpy
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="programming">
+              <span data-feather="shopping-cart"></span>
+              Programming
+            </a>
+          </li>
+
+          <p></p>
+          <p></p>
+          <li class="nav-item">
+            <span data-feather="home"></span>
+            ASSIGNMENTS
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="linear_assignment">
+              <span data-feather="home"></span>
+              Linear Algebra Assignment
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="numpy_assignment">
+              <span data-feather="shopping-cart"></span>
+              Numpy Assignment
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="linear_regression_assignment">
+              <span data-feather="shopping-cart"></span>
+              Linear Regression Assignment
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="final_assignment">
+              <span data-feather="shopping-cart"></span>
+              Final Assignment
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+    </nav>
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+
+    <h1 class="h2">Machine Learning Theory Test</h1> 
+    </div> 
+    <iframe name='proprofs' id='proprofs' width='550' height='650' frameborder=0 marginwidth=0 marginheight=0 src='https://www.proprofs.com/quiz-school/story.php?title=math-quiz-template_338405&id=3132239&ew=530'></iframe><div style='font-size:10px; font-family:Arial, Helvetica, sans-serif; color:#000;text-align:left;'><a href='https://www.proprofs.com/quiz-school/story.php?title=math-quiz-template_338405' target='_blank' title='Machine Learning Theory Quiz by ProProfs'>Machine Learning Theory Quiz by ProProfs</a></div>
+
+  </main>
+</div>
+</div>
+</body>
+</html>
