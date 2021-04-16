@@ -146,5 +146,11 @@ def numpy_test_page():
 	html = render_template('numpy_test.html')
 	return html
 
+# Linear regression test
+@app.route('/final_assignment', methods=['GET'])
+def reg_test_page():
+	html = render_template('reg_test.html')
+	return html
+
 if __name__ == "__main__":
 	app.run()
