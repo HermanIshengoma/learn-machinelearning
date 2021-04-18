@@ -149,6 +149,26 @@
       </div>
     </nav>
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+
+       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2"> Machine Learning </h1></div>
+
+    <p>Most of us are unaware that we already interact with Machine Learning everyday. Every time we Google something, listen to a song, or even take a photo, Machine Leaning is part of the engine behind all these things and is in the forefront of technological and medical advancements such as self-driving cars and creating new drugs. </p>
+
+    <p>The reason that Machine Learning techniques have seen a wide range of use is because such techniques allow the machine to learn and find underlying patterns within complex data that would otherwise be a struggle to discover. Essentially, with machine learning we can now instead of having humans creating rules with data in order to create answers to a problem as in traditional software engineering, machine learning can use the data and answers to discover the rules behind the problem. </p>
+
+    <p>To learn the rules governing a phenomenon, machines have to go through a learning process where they try different rules based on how well they perform. </p>
+
+    <p>When performing Machine Learning, the data is usually in the form of a matrix. The rows of the matrix represent a <strong>sample</strong>. A sample is just an example of the data we are working with, for example a sample may represent a person, hence in this case row 0 of the matrix will represent data for person 0, row 1 of the matrix will represent the data for person 1, and so on. The columns on the other hand represent the <strong>features</strong> of the samples. Continuing with the person analogy: column 0 may represent the color of a person's eyes, column 1 may represent height and so on. </p>
+
+    <p>There are multiple forms of Machine Learning. From unsupervised Machine Learning where you give the computer only input data and the computer may decide to cluster the samples into separate groups where each group contains samples that are similar to one another based on their features. For example: if we have a dataset where the samples are the faces of people and the features are the pixels of the people. The computer may be able to cluster the faces into separate groups, where the first group may be all the green-eyed people, the second group are all the brown eyed people and etc. In this way, the computer may learn to distinguish faces. In this course, however, we'll be focusing on supervised learning which is normally associated with making future predictions. </p>
+
+    <p><strong>In supervised learning </strong>, we have the <strong>input</strong> matrix that contains the samples and the features and we have an <strong>output</strong> vector which is the value we wish the machine to predict based on the input matrix (<strong>Note:</strong> entry 'i' of the output vector corresponds to sample 'i' of the input matrix). For example, our input matrix can be where the samples are people and features are their characteristics, the output vector can then be of where they live, how much income they have, etc. In order to learn, the computer, using mathematical models, learns the relationships between the sample's features and the output. Once it learns this relationship well, we can use other inputs the computer has never seen in order to make predictions. </p>
+
+    <p>Being able to adapt to new inputs and make predictions is the crucial <strong>generalization</strong> part of machine learning. In training, we want to maximize generalization, so the supervised model defines the real ‘general’ underlying relationship. If the model is over-trained, we cause <strong> over-fitting</strong> to the examples used and the model would be unable to adapt to new, previously unseen inputs. In order to minimize over-training, when learning we often separate the data into a training set and testing set. We use the training set to find the underlying relationship and then test the relationship we've found on the testing set to see if our predictions are acceptable. </p>
+
+    <p>One type of supervised learning technique is known as linear regression, used to predict continuous outcomes such as predicting the future prices of houses, based on their size and so on. Below, we explore how it works.</p>
+
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
 
     <style> 
